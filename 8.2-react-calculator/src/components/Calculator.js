@@ -65,27 +65,39 @@ class Calculator extends Component {
   render() {
     const { input, result } = this.state;
     return (
-      <div>
-        <input type="text" className="" value={input} onChange={this.handleInputChange}/>
+      <div className="Calculator">
+        <input type="text" className="Display" value={input} onChange={this.handleInputChange}/>
 
-        <button value="9" onClick={this.handleInputChange}>9</button>
-        <button value="8" onClick={this.handleInputChange}>8</button>
-        <button value="7" onClick={this.handleInputChange}>7</button>
-        <button value="6" onClick={this.handleInputChange}>6</button>
-        <button value="5" onClick={this.handleInputChange}>5</button>
-        <button value="4" onClick={this.handleInputChange}>4</button>
-        <button value="3" onClick={this.handleInputChange}>3</button>
-        <button value="2" onClick={this.handleInputChange}>2</button>
-        <button value="1" onClick={this.handleInputChange}>1</button>
-        <button value="0" onClick={this.handleInputChange}>0</button>
-        <button value="/" onClick={this.handleOperation}>&#247;</button>
-        <button value="x" onClick={this.handleOperation}>&times;</button>
-        <button value="+" onClick={this.handleOperation}>&#43;</button>
-        <button value="-" onClick={this.handleOperation}>&#45;</button>
-        <button value="=" onClick={this.handleResult}>&#61;</button>
-        <button value="AC" onClick={this.handleClear}>AC</button>
-        <button value="%">%</button>
-        <button value="+/-">+/-</button>
+        <div className="Buttons">
+          <div className="Numbers-Container">
+            <button value="9" className="Numbers" onClick={this.handleInputChange}>9</button>
+            <button value="8" className="Numbers" onClick={this.handleInputChange}>8</button>
+            <button value="7" className="Numbers" onClick={this.handleInputChange}>7</button>
+            <button value="6" className="Numbers" onClick={this.handleInputChange}>6</button>
+            <button value="5" className="Numbers" onClick={this.handleInputChange}>5</button>
+            <button value="4" className="Numbers" onClick={this.handleInputChange}>4</button>
+            <button value="3" className="Numbers" onClick={this.handleInputChange}>3</button>
+            <button value="2" className="Numbers" onClick={this.handleInputChange}>2</button>
+            <button value="1" className="Numbers" onClick={this.handleInputChange}>1</button>
+            <button value=".">.</button>
+            <button value="0" className="Numbers" onClick={this.handleInputChange}>0</button>
+            <button value="="  onClick={this.handleResult}>&#61;</button>
+          </div>
+          
+          <div className="Operations-Container">
+            <button value="/" className="Operations" onClick={this.handleOperation}>&#247;</button>
+            <button value="x" className="Operations" onClick={this.handleOperation}>&times;</button>
+            <button value="+" className="Operations" onClick={this.handleOperation}>&#43;</button>
+            <button value="-" className="Operations" onClick={this.handleOperation}>&#45;</button>
+          </div>
+
+          <div className="TopBtns-Container">
+            <button value="AC" className="TopBtns" onClick={this.handleClear}>AC</button>
+            <button value="+/-" className="TopBtns">+/-</button>
+            <button value="%" className="TopBtns">%</button>
+          </div>
+          
+        </div>
       </div>
     );
   }

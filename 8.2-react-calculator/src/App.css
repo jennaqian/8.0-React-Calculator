@@ -1,0 +1,65 @@
+html {
+    background-color: black;
+    /* background: linear-gradient(45deg, black, purple, white, white, purple, black); */
+    /* background-size: 300%; */
+}
+
+.Calculator {
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    width: 350px;
+    height: 500px;
+    margin: 0 auto;
+}
+.Calculator > input {
+    width: 300px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: end;
+    font-size: 80px;
+}
+
+.Buttons {
+    display: grid;
+    grid-template-areas:
+    "topBtns topBtns topBtns operations"
+    "nums nums nums operations"
+    "nums nums nums operations"
+    "nums nums nums operations";
+    margin: 0 auto;
+}
+
+.Numbers-Container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-area: nums;
+}
+.Numbers-Container button {
+    width: 75px;
+    height: 50px;
+    margin: 2px;
+}
+.Operations-Container {
+    display: grid;
+    grid-area: operations;
+}
+.Operations-Container button {
+    font-size: xx-large;
+    width: 75px;
+    height: 75px;
+    margin: 2px;
+    background-color: rgb(255, 204, 0);
+}
+.TopBtns-Container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-area: topBtns;
+}
+.TopBtns-Container button {
+    font-size: x-large;
+    width: 75px;
+    height: 75px;
+    margin: 2px;
+}
