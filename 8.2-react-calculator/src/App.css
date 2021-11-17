@@ -1,7 +1,6 @@
 html {
     background-color: black;
-    /* background: linear-gradient(45deg, black, purple, white, white, purple, black); */
-    /* background-size: 300%; */
+    padding-top: 5%;
 }
 
 .Calculator {
@@ -11,6 +10,9 @@ html {
     width: 350px;
     height: 500px;
     margin: 0 auto;
+    border-radius: 10%;
+    padding: 20px;
+    box-shadow: 15px 15px 10px gray;
 }
 .Calculator > input {
     width: 300px;
@@ -19,6 +21,7 @@ html {
     padding: 10px;
     text-align: end;
     font-size: 80px;
+    color: gray;
 }
 
 .Buttons {
@@ -39,18 +42,24 @@ html {
 .Numbers-Container button {
     width: 75px;
     height: 50px;
-    margin: 2px;
+    margin: 5px;
+}
+.Numbers {
+    font-weight: bold;
 }
 .Operations-Container {
     display: grid;
     grid-area: operations;
 }
 .Operations-Container button {
-    font-size: xx-large;
+    font-size: 30px;
     width: 75px;
     height: 75px;
-    margin: 2px;
+    margin: 5px;
+}
+.Operations-Container button:hover{
     background-color: rgb(255, 204, 0);
+    font-size: 45px;
 }
 .TopBtns-Container {
     display: grid;
@@ -61,5 +70,13 @@ html {
     font-size: x-large;
     width: 75px;
     height: 75px;
-    margin: 2px;
+    margin: 5px;
+}
+.BtmBtns {
+    font-size: large;
+}
+.TopBtns-Container button:hover, .BtmBtns:hover{
+    background-color: black;
+    color: white;
+    font-size: xx-large;
 }
